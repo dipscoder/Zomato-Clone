@@ -34,7 +34,7 @@ export default function BottomNav() {
     >
       <BottomNavigationAction label="Order" icon={<RestoreIcon />} />
       <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+      <BottomNavigationAction label="Profile" icon={<LocationOnIcon />} />
     </BottomNavigation>
   );
 }
