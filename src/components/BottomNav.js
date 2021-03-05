@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 // Style
 import { makeStyles } from '@material-ui/core/styles';
@@ -18,9 +18,10 @@ const useStyles = makeStyles({
 
 export default function BottomNav() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
   const history = useHistory();
-//   console.log(history);
+  const location = useLocation();
+  const [value, setValue] = React.useState(location.pathname);
+//   console.log("Location->",location,"History",history);
 
   return (
     <BottomNavigation
