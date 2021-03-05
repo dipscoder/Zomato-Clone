@@ -1,10 +1,14 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
+
+// Style
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+
 
 const useStyles = makeStyles({
   root: {
@@ -15,12 +19,15 @@ const useStyles = makeStyles({
 export default function BottomNav() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const history = useHistory();
+//   console.log(history);
 
   return (
     <BottomNavigation
       value={value}
       onChange={(event, newValue) => {
         setValue(newValue);
+        history.push(newValue);
       }}
       showLabels
       className={classes.root}
