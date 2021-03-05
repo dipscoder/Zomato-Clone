@@ -24,8 +24,15 @@ export default function BottomNav() {
       }}
       showLabels
       className={classes.root}
+      style={{
+        position: "fixed",
+        left: "50%",
+        bottom: "20px",
+        transform: "translate(-50%, -50%)",
+        margin: "0 auto",
+      }}
     >
-      <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+      <BottomNavigationAction label="Order" icon={<RestoreIcon />} />
       <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
       <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
     </BottomNavigation>
