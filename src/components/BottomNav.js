@@ -32,9 +32,9 @@ export default function BottomNav() {
         margin: "0 auto",
       }}
     >
-      <BottomNavigationAction label="Order" icon={<RestoreIcon />} />
-      <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Profile" icon={<LocationOnIcon />} />
+      <BottomNavigationAction label="Order" value="/order" icon={<RestoreIcon />} />
+      <BottomNavigationAction label="Favorites" value="/favorite" icon={<FavoriteIcon />} />
+      <BottomNavigationAction label="Profile" value="/profile" icon={<LocationOnIcon />} />
     </BottomNavigation>
   );
 }
